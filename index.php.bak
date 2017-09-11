@@ -1,0 +1,52 @@
+<?php
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
+include_once "class/PageData.class.php";
+include_once "class/PenkumLuhkum.class.php";
+
+
+//load class
+$PageData = new PageData();
+$PenkumLuhkum = new PenkumLuhkum();
+
+//inisialisasi
+$PageData->title = "Bank Data Intelijen Kejari Palu";
+$PageData->appname = "Bank Data Intelijen Kejaksaan Negeri Palu";
+$PageData->content = include_once 'views/navigation.php';
+$PageData->content .= include_once 'views/sidebar.php';
+//$PageData->content .= include_once 'api/test.php';
+
+//$PenkumLuhkum->file = include_once "views/penkumluhkum/pertriwulan.php";
+
+//load CSS
+$PageData->addCSS("link href='vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet'");
+$PageData->addCSS("link href='vendor/metisMenu/metisMenu.min.css' rel='stylesheet'");
+$PageData->addCSS("link href='dist/css/sb-admin-2.css' rel='stylesheet'");
+$PageData->addCSS("link href='vendor/morrisjs/morris.css' rel='stylesheet'");
+$PageData->addCSS("link href='vendor/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css'");
+// JS
+$PageData->addJs("<script src='vendor/jquery/jquery.min.js'></script>");
+$PageData->addJs("<script src='vendor/bootstrap/js/bootstrap.min.js'></script>");
+$PageData->addJs("<script src='vendor/metisMenu/metisMenu.min.js'></script>");
+$PageData->addJs("<script src='vendor/raphael/raphael.min.js'></script>");
+$PageData->addJs("<script src='vendor/morrisjs/morris.min.js'></script>");
+$PageData->addJs("<script src='vendor/highcharts/highcharts.js'></script>");
+//$PageData->addJs("<script src='data/morris-data-bdi.js'></script>");
+//$PageData->addJs("<script src='data/morris-data.js'></script>");
+$PageData->addJs("<script src='dist/js/sb-admin-2.js'></script>");
+$PenkumLuhkum->dataMoris="<script src='data/penkum-luhkum.js'></script>";
+
+$userClicked = isset($_GET['page']);
+if($userClicked){
+	$fileToLoad = $_GET['page'];
+}else{
+	$fileToLoad = "dashboard";
+}
+$PageData->content .= include_once "views/$fileToLoad.php";
+
+
+$page = include_once 'template/header.php';
+$page .= include_once 'template/page.php';
+echo "$page";
+ ?>
