@@ -1,4 +1,7 @@
-<?php include 'konfig.php'; ?>
+<?php 
+include 'konfig.php'; 
+include 'session.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -130,11 +133,11 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a href="../bdi/index.php?p=playpenluhgrafik" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-play"></i> Play </span></a>
+            <a href="../bdi/index.php?p=playpenluhgrafik" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-play"></i> Play</a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="./">... <span class="sr-only">(current)</span></a></li>
+          <li><a href="logout.php" onclick="return confirm('Yakin mau logout?')"><i class="fa fa-sign-out"></i> Log out &nbsp;&nbsp; <span class="sr-only">(current)</span></a></li>
         </ul>
       </div><!--/.nav-collapse -->
   </nav>

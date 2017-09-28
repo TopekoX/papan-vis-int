@@ -15,5 +15,5 @@ $con = mysqli_connect($host, $user, $pass, $db) or die(mysqli_error($con));
 
 // App meta data
 $satker = "Kejaksaan Negeri Palu";
-$title = "Intel Kejari Palu";
+$title = "Bank Data";
 ?>
