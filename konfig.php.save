@@ -9,11 +9,11 @@
 $host = "localhost";
 $user = "root";
 $pass = "xxxxxx";
-$db = "bdi";
+$db = "visual_penkum";
 
 $con = mysqli_connect($host, $user, $pass, $db) or die(mysqli_error($con));
 
 // App meta data
 $satker = "Kejaksaan Negeri Palu";
-$title = "Visualisasi Penkum";
+$title = "Visualisasi Penkum Luhkum";
 ?>
