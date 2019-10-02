@@ -7,7 +7,7 @@
   $id = $_POST['id'];
   $tahun = $_POST['tahun'];
 
-  include_once '../bdi/konfig.php';
+  include_once '../visual/konfig.php';
 
   $SQL = "SELECT * FROM penkum WHERE ID=$id";
   $img1 = null;

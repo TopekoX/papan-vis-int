@@ -46,7 +46,7 @@
                 </thead>
                 <tbody>
                   <?php
-                    include_once '../bdi/konfig.php';
+                    include_once '../visual/konfig.php';
 
                     $tahun5 = $tahunini-1;
                     $tahunakhir = $tahun5;
@@ -63,13 +63,13 @@
                       					IF(SUM(DATE(penkum.Waktu) BETWEEN '$tahun2-01-01' AND '$tahun2-12-31') IS NULL, 0, SUM(DATE(penkum.Waktu) BETWEEN '$tahun2-01-01' AND '$tahun2-12-31')) AS '$tahun2',
                       					IF(SUM(DATE(penkum.Waktu) BETWEEN '$tahun3-01-01' AND '$tahun3-12-31') IS NULL, 0, SUM(DATE(penkum.Waktu) BETWEEN '$tahun3-01-01' AND '$tahun3-12-31')) AS '$tahun3',
                       					IF(SUM(DATE(penkum.Waktu) BETWEEN '$tahun4-01-01' AND '$tahun4-12-31') IS NULL, 0, SUM(DATE(penkum.Waktu) BETWEEN '$tahun4-01-01' AND '$tahun4-12-31')) AS '$tahun4',
-                      					IF(SUM(DATE(penkum.Waktu) BETWEEN '$tahun5-01-01' AND '$tahun5-12-31') IS NULL, 0, SUM(DATE(penkum.Waktu) BETWEEN '$tahun5-01-01' AND '$tahun5-12-31')) AS '$tahun5' FROM bdi.penkum");
+                      					IF(SUM(DATE(penkum.Waktu) BETWEEN '$tahun5-01-01' AND '$tahun5-12-31') IS NULL, 0, SUM(DATE(penkum.Waktu) BETWEEN '$tahun5-01-01' AND '$tahun5-12-31')) AS '$tahun5' FROM visual.penkum");
 
                       $luhkum5 = mysqli_query($con, "SELECT IF(SUM(DATE(luhkum.Waktu) BETWEEN '$tahun1-01-01' AND '$tahun1-03-31') IS NULL, 0, SUM(DATE(luhkum.Waktu) BETWEEN '$tahun1-01-01' AND '$tahun1-12-31')) AS '$tahun1',
                       					IF(SUM(DATE(luhkum.Waktu) BETWEEN '$tahun2-01-01' AND '$tahun2-12-31') IS NULL, 0, SUM(DATE(luhkum.Waktu) BETWEEN '$tahun2-01-01' AND '$tahun2-12-31')) AS '$tahun2',
                       					IF(SUM(DATE(luhkum.Waktu) BETWEEN '$tahun3-01-01' AND '$tahun3-12-31') IS NULL, 0, SUM(DATE(luhkum.Waktu) BETWEEN '$tahun3-01-01' AND '$tahun3-12-31')) AS '$tahun3',
                       					IF(SUM(DATE(luhkum.Waktu) BETWEEN '$tahun4-01-01' AND '$tahun4-12-31') IS NULL, 0, SUM(DATE(luhkum.Waktu) BETWEEN '$tahun4-01-01' AND '$tahun4-12-31')) AS '$tahun4',
-                      					IF(SUM(DATE(luhkum.Waktu) BETWEEN '$tahun5-01-01' AND '$tahun5-12-31') IS NULL, 0, SUM(DATE(luhkum.Waktu) BETWEEN '$tahun5-01-01' AND '$tahun5-12-31')) AS '$tahun5' FROM bdi.luhkum");
+                      					IF(SUM(DATE(luhkum.Waktu) BETWEEN '$tahun5-01-01' AND '$tahun5-12-31') IS NULL, 0, SUM(DATE(luhkum.Waktu) BETWEEN '$tahun5-01-01' AND '$tahun5-12-31')) AS '$tahun5' FROM visual.luhkum");
 
 
                       while ($p = mysqli_fetch_array($penkum5)){
@@ -101,9 +101,9 @@
                     if(isset($_POST["tahunini"])){
 
                      $luh = mysqli_query($con, "SELECT IF(SUM(DATE(luhkum.Waktu) BETWEEN '$tahunawal-01-01' AND '$tahunakhir-03-31') IS NULL, 0, SUM(DATE(luhkum.Waktu)
-                                          BETWEEN '$tahunawal-01-01' AND '$tahunakhir-12-31')) AS 'luhkum' FROM bdi.luhkum");
+                                          BETWEEN '$tahunawal-01-01' AND '$tahunakhir-12-31')) AS 'luhkum' FROM visual.luhkum");
                      $pen = mysqli_query($con, "SELECT IF(SUM(DATE(penkum.Waktu) BETWEEN '$tahunawal-01-01' AND '$tahunakhir-03-31') IS NULL, 0, SUM(DATE(penkum.Waktu)
-                                          BETWEEN '$tahunawal-01-01' AND '$tahunakhir-12-31')) AS 'penkum' FROM bdi.penkum");
+                                          BETWEEN '$tahunawal-01-01' AND '$tahunakhir-12-31')) AS 'penkum' FROM visual.penkum");
                    }
                  ?>
 

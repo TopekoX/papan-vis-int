@@ -44,10 +44,10 @@ $tahun=$_POST['tahun'];
                   <?php
                     if(isset($_POST['tahun'])){
 
-                        $SQLTW1 = "SELECT * FROM bdi.penkum WHERE Waktu >= '$tahun-01-01' AND Waktu <= '$tahun-03-31' ORDER BY Waktu ASC";
-                        $SQLTW2 = "SELECT * FROM bdi.penkum WHERE Waktu >= '$tahun-04-01' AND Waktu <= '$tahun-06-30' ORDER BY Waktu ASC";
-                        $SQLTW3 = "SELECT * FROM bdi.penkum WHERE Waktu >= '$tahun-07-01' AND Waktu <= '$tahun-09-30' ORDER BY Waktu ASC";
-                        $SQLTW4 = "SELECT * FROM bdi.penkum WHERE Waktu >= '$tahun-10-01' AND Waktu <= '$tahun-12-31' ORDER BY Waktu ASC";
+                        $SQLTW1 = "SELECT * FROM visual.penkum WHERE Waktu >= '$tahun-01-01' AND Waktu <= '$tahun-03-31' ORDER BY Waktu ASC";
+                        $SQLTW2 = "SELECT * FROM visual.penkum WHERE Waktu >= '$tahun-04-01' AND Waktu <= '$tahun-06-30' ORDER BY Waktu ASC";
+                        $SQLTW3 = "SELECT * FROM visual.penkum WHERE Waktu >= '$tahun-07-01' AND Waktu <= '$tahun-09-30' ORDER BY Waktu ASC";
+                        $SQLTW4 = "SELECT * FROM visual.penkum WHERE Waktu >= '$tahun-10-01' AND Waktu <= '$tahun-12-31' ORDER BY Waktu ASC";
 
                      /*  while ($a <= 4) {
                             if ($a == 1) {

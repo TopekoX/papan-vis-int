@@ -42,16 +42,16 @@
     <title>Login</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../bdi/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../datavisual/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="../bdi/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="../datavisual/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../bdi/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../datavisual/dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../bdi/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../datavisual/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -85,7 +85,7 @@
                                 <!--<a href="index.html" class="btn btn-lg btn-success btn-block">Login</a> -->
                                 <input type = "submit" class="btn btn-lg btn-success btn-block" value = " Masuk "/><br />
                                 <div style = "font-size:11px; color:#cc0000; margin-top:10px">
-                                    <?php echo $error; ?>
+                              <!--      <?php echo $error; ?> -->
                                 </div>
                             </fieldset>
                         </form>
@@ -96,16 +96,16 @@
     </div>
 
     <!-- jQuery -->
-    <script src="../bdi/vendor/jquery/jquery.min.js"></script>
+    <script src="../datavisual/vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../bdi/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../datavisual/vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="../bdi/vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="../datavisual/vendor/metisMenu/metisMenu.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="../bdi/dist/js/sb-admin-2.js"></script>
+    <script src="../datavisual/dist/js/sb-admin-2.js"></script>
 
 </body>
 

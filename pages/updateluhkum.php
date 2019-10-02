@@ -1,5 +1,5 @@
 <?php
-include_once '../bdi/konfig.php';
+include_once '../visual/konfig.php';
 ?>
 <div class="container">
   <div class="col-lg-12">

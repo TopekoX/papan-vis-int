@@ -1,6 +1,6 @@
 <?php
 
-include_once '../bdi/konfig.php';
+include_once '../visual/konfig.php';
 
 $tahunini = date('Y');
 $tahunawal = $tahunini - 4;

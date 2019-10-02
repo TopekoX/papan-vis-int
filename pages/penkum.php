@@ -1,6 +1,6 @@
 <?php
   $tahun = $_POST['tahun'];
-  include_once '../bdi/konfig.php';
+  include_once '../visual/konfig.php';
   $SQL = "SELECT * FROM penkum WHERE Waktu >= '$tahun-01-01' AND Waktu <= '$tahun-12-31' ORDER BY Waktu DESC";
 ?>
 <div class="container">

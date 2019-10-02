@@ -56,13 +56,13 @@ $tahun=$_POST['tahun'];
                     if(isset($_POST['tahun']) AND isset($_POST['triwulan'])){
 
                       if($tw == '1'){
-                        $SQL = "SELECT * FROM bdi.luhkum WHERE Waktu >= '$tahun-01-01' AND Waktu <= '$tahun-03-31' ORDER BY Waktu ASC";
+                        $SQL = "SELECT * FROM visual.luhkum WHERE Waktu >= '$tahun-01-01' AND Waktu <= '$tahun-03-31' ORDER BY Waktu ASC";
                       }else if($tw == '2'){
-                        $SQL = "SELECT * FROM bdi.luhkum WHERE Waktu >= '$tahun-04-01' AND Waktu <= '$tahun-06-30' ORDER BY Waktu ASC";
+                        $SQL = "SELECT * FROM visual.luhkum WHERE Waktu >= '$tahun-04-01' AND Waktu <= '$tahun-06-30' ORDER BY Waktu ASC";
                       }else if($tw == '3'){
-                          $SQL = "SELECT * FROM bdi.luhkum WHERE Waktu >= '$tahun-07-01' AND Waktu <= '$tahun-09-30' ORDER BY Waktu ASC";
+                          $SQL = "SELECT * FROM visual.luhkum WHERE Waktu >= '$tahun-07-01' AND Waktu <= '$tahun-09-30' ORDER BY Waktu ASC";
                       }else if($tw == '4'){
-                        $SQL = "SELECT * FROM bdi.luhkum WHERE Waktu >= '$tahun-10-01' AND Waktu <= '$tahun-12-31' ORDER BY Waktu ASC";
+                        $SQL = "SELECT * FROM visual.luhkum WHERE Waktu >= '$tahun-10-01' AND Waktu <= '$tahun-12-31' ORDER BY Waktu ASC";
                       }
 
                         $luh = mysqli_query($con, $SQL);
@@ -86,7 +86,7 @@ $tahun=$_POST['tahun'];
                                     $jmlkec = $k['JumlahKecamatan'];
                                   }
 
-                            $SQLluhkel = "SELECT COUNT(IDKelurahan) AS JumlahKelurahan FROM bdi.kegiatanluhkum WHERE IDLuhkum = ".$p['ID']."";
+                            $SQLluhkel = "SELECT COUNT(IDKelurahan) AS JumlahKelurahan FROM visual.kegiatanluhkum WHERE IDLuhkum = ".$p['ID']."";
 
                             $kel = mysqli_query($con, $SQLluhkel);
 

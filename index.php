@@ -16,7 +16,7 @@ include 'session.php';
     <title>Bank Data Kejari Palu</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../bdi/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../<?php echo $baseurl; ?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .table-borderless > tbody > tr > td,
@@ -34,7 +34,7 @@ include 'session.php';
     </style>
 
     <!-- Custom Fonts -->
-    <link href="../bdi/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../<?php echo $baseurl; ?>/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -42,7 +42,7 @@ include 'session.php';
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- JQUERY -->
-    <script src="../bdi/vendor/jquery/jquery-2.2.3.min.js"></script>
+    <script src="../<?php echo $baseurl; ?>/vendor/jquery/jquery-2.2.3.min.js"></script>
 
     <script src = "https://maps.googleapis.com/maps/api/js"></script>
 
@@ -59,7 +59,7 @@ include 'session.php';
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../bdi"><?php echo $title; ?></a>
+        <a class="navbar-brand" href="../<?php echo $baseurl; ?>"><?php echo $title; ?></a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
@@ -133,7 +133,7 @@ include 'session.php';
             </ul>
           </li>
           <li class="dropdown">
-            <a href="../bdi/index.php?p=playpenluhgrafik" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-play"></i> Play</a>
+            <a href="../<?php echo $baseurl; ?>/index.php?p=playpenluhgrafik" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-play"></i> Play</a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -178,21 +178,21 @@ include 'session.php';
     <!-- jQuery 2.2.3 -->
     <!--  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-    <!--<script src="../bdi/vendor/jquery/jquery.min.js"></script>-->
+    <!--<script src="../<?php echo $baseurl; ?>/vendor/jquery/jquery.min.js"></script>-->
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../bdi/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../<?php echo $baseurl; ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="../bdi/vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="../<?php echo $baseurl; ?>/vendor/metisMenu/metisMenu.min.js"></script>
 
     <!-- Chartjs JavaScript -->
-    <script src="../bdi/vendor/chartjs/Chart.js"></script>
+    <script src="../<?php echo $baseurl; ?>/vendor/chartjs/Chart.js"></script>
 
     <!-- Morris Charts JavaScript -->
-    <script src="../bdi/vendor/raphael/raphael.min.js"></script>
-    <script src="../bdi/vendor/morrisjs/morris.min.js"></script>
-    <script src="../bdi/data/morris-data.js"></script>
+    <script src="../<?php echo $baseurl; ?>/vendor/raphael/raphael.min.js"></script>
+    <script src="../<?php echo $baseurl; ?>/vendor/morrisjs/morris.min.js"></script>
+    <script src="../<?php echo $baseurl; ?>/data/morris-data.js"></script>
 
     <?php
       include_once 'data/penkum-luhkum.php';

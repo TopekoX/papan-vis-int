@@ -1,9 +1,9 @@
 <?php
-include_once '../bdi/konfig.php';
+include_once '../visual/konfig.php';
 $tahun = date('Y');
 $sqlpetapenkum = "SELECT * FROM penkum WHERE Waktu  >= '$tahun-01-01' AND Waktu <= '$tahun-12-31' AND (Lat IS NOT NULL AND
 	TRIM(Lat) <> '') AND (Lon IS NOT NULL AND TRIM(Lon) <> '') ORDER BY Waktu ASC";
-$sqlpenkumbelum = "SELECT * FROM bdi.lokasigiatpenluh where JenisKegiatan='0' AND PenkumLuhkum='1' AND (Lat IS NOT NULL AND
+$sqlpenkumbelum = "SELECT * FROM visual.lokasigiatpenluh where JenisKegiatan='0' AND PenkumLuhkum='1' AND (Lat IS NOT NULL AND
   TRIM(Lat) <> '') AND (Lon IS NOT NULL AND TRIM(Lon) <> '')";
 
 ?>

@@ -7,13 +7,14 @@
 
 // Database Konfigurasi
 $host = "localhost";
-$user = "root";
-$pass = "xxxxxx";
-$db = "bdi";
+$user = "ucup";
+$pass = "topeko";
+$db = "visual";
 
 $con = mysqli_connect($host, $user, $pass, $db) or die(mysqli_error($con));
 
 // App meta data
 $satker = "Kejaksaan Negeri Palu";
 $title = "Visualisasi Penkum";
+$baseurl = "visual"
 ?>

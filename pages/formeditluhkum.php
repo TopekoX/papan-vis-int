@@ -4,7 +4,7 @@
   </div>
   <div class="col-lg-12">
     <?php
-    include_once '../bdi/konfig.php';
+    include_once '../visual/konfig.php';
     $id = $_POST['idluh'];
     $tahun = $_POST['tahun'];
 
