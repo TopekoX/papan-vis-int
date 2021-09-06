@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.4.1deb2ubuntu2
--- http://www.phpmyadmin.net
+-- version 5.0.4
+-- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: 08 Agu 2017 pada 16.09
--- Versi Server: 5.7.19-0ubuntu0.16.04.1
--- PHP Version: 7.0.18-0ubuntu0.16.04.1
+-- Host: 127.0.0.1
+-- Generation Time: Sep 06, 2021 at 02:09 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -23,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kecamatan`
+-- Table structure for table `kecamatan`
 --
 
 CREATE TABLE `kecamatan` (
@@ -32,7 +33,7 @@ CREATE TABLE `kecamatan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kecamatan`
+-- Dumping data for table `kecamatan`
 --
 
 INSERT INTO `kecamatan` (`ID`, `NamaKecamatan`) VALUES
@@ -48,7 +49,7 @@ INSERT INTO `kecamatan` (`ID`, `NamaKecamatan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kegiatanluhkum`
+-- Table structure for table `kegiatanluhkum`
 --
 
 CREATE TABLE `kegiatanluhkum` (
@@ -58,7 +59,7 @@ CREATE TABLE `kegiatanluhkum` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kegiatanluhkum`
+-- Dumping data for table `kegiatanluhkum`
 --
 
 INSERT INTO `kegiatanluhkum` (`ID`, `IDLuhkum`, `IDKelurahan`) VALUES
@@ -84,7 +85,7 @@ INSERT INTO `kegiatanluhkum` (`ID`, `IDLuhkum`, `IDKelurahan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kelurahan`
+-- Table structure for table `kelurahan`
 --
 
 CREATE TABLE `kelurahan` (
@@ -94,7 +95,7 @@ CREATE TABLE `kelurahan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kelurahan`
+-- Dumping data for table `kelurahan`
 --
 
 INSERT INTO `kelurahan` (`ID`, `NamaKelurahan`, `IDKecamatan`) VALUES
@@ -147,7 +148,7 @@ INSERT INTO `kelurahan` (`ID`, `NamaKelurahan`, `IDKecamatan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `korupsi`
+-- Table structure for table `korupsi`
 --
 
 CREATE TABLE `korupsi` (
@@ -159,7 +160,7 @@ CREATE TABLE `korupsi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `korupsi`
+-- Dumping data for table `korupsi`
 --
 
 INSERT INTO `korupsi` (`ID`, `Lid`, `Dik`, `Tut`, `Tahun`) VALUES
@@ -172,7 +173,7 @@ INSERT INTO `korupsi` (`ID`, `Lid`, `Dik`, `Tut`, `Tahun`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `luhkum`
+-- Table structure for table `luhkum`
 --
 
 CREATE TABLE `luhkum` (
@@ -185,16 +186,16 @@ CREATE TABLE `luhkum` (
   `LokasiPenyuluhan` varchar(255) DEFAULT NULL,
   `Petugas` varchar(255) DEFAULT NULL,
   `Ket` varchar(255) DEFAULT NULL,
-  `LinkGambar1` text,
-  `LinkGambar2` text,
-  `LinkGambar3` text,
-  `LinkGambar4` text,
-  `Lat` text,
-  `Lon` text
+  `LinkGambar1` text DEFAULT NULL,
+  `LinkGambar2` text DEFAULT NULL,
+  `LinkGambar3` text DEFAULT NULL,
+  `LinkGambar4` text DEFAULT NULL,
+  `Lat` text DEFAULT NULL,
+  `Lon` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `luhkum`
+-- Dumping data for table `luhkum`
 --
 
 INSERT INTO `luhkum` (`ID`, `JumlahPenduduk`, `Waktu`, `SasaranDanMateri`, `JumlahPeserta`, `NamaKelurahanDesa`, `LokasiPenyuluhan`, `Petugas`, `Ket`, `LinkGambar1`, `LinkGambar2`, `LinkGambar3`, `LinkGambar4`, `Lat`, `Lon`) VALUES
@@ -207,7 +208,7 @@ INSERT INTO `luhkum` (`ID`, `JumlahPenduduk`, `Waktu`, `SasaranDanMateri`, `Juml
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `matkul`
+-- Table structure for table `matkul`
 --
 
 CREATE TABLE `matkul` (
@@ -217,7 +218,7 @@ CREATE TABLE `matkul` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `matkul`
+-- Dumping data for table `matkul`
 --
 
 INSERT INTO `matkul` (`id_matkul`, `nm_matkul`, `jml_sks`) VALUES
@@ -228,7 +229,7 @@ INSERT INTO `matkul` (`id_matkul`, `nm_matkul`, `jml_sks`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `narkoba`
+-- Table structure for table `narkoba`
 --
 
 CREATE TABLE `narkoba` (
@@ -238,7 +239,7 @@ CREATE TABLE `narkoba` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `narkoba`
+-- Dumping data for table `narkoba`
 --
 
 INSERT INTO `narkoba` (`ID`, `Tahun`, `Jumlah`) VALUES
@@ -252,35 +253,35 @@ INSERT INTO `narkoba` (`ID`, `Tahun`, `Jumlah`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `penkum`
+-- Table structure for table `penkum`
 --
 
 CREATE TABLE `penkum` (
   `ID` int(11) NOT NULL,
   `Sasaran` varchar(255) DEFAULT NULL,
   `Materi` varchar(255) DEFAULT NULL,
-  `JumlahPeserta` int(11) DEFAULT '0',
+  `JumlahPeserta` int(11) DEFAULT 0,
   `Waktu` date DEFAULT NULL,
   `Tempat` varchar(255) DEFAULT NULL,
   `Media` varchar(255) DEFAULT NULL,
   `MateriTidakLangsung` varchar(255) DEFAULT NULL,
   `WaktuTidakLangsung` varchar(255) DEFAULT NULL,
-  `KetTidakLangsung` text,
+  `KetTidakLangsung` text DEFAULT NULL,
   `JenisPelaksanaan` enum('langsung','tidak_langsung') DEFAULT NULL,
   `Petugas` varchar(255) DEFAULT NULL,
-  `Ket` text,
+  `Ket` text DEFAULT NULL,
   `KerjaSamaInstansiLain` varchar(255) DEFAULT NULL,
-  `LinkGambar1` text,
-  `LinkGambar2` text,
-  `LinkGambar3` text,
-  `LinkGambar4` text,
+  `LinkGambar1` text DEFAULT NULL,
+  `LinkGambar2` text DEFAULT NULL,
+  `LinkGambar3` text DEFAULT NULL,
+  `LinkGambar4` text DEFAULT NULL,
   `IDKelurahan` int(11) DEFAULT NULL,
-  `Lat` text,
-  `Lon` text
+  `Lat` text DEFAULT NULL,
+  `Lon` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `penkum`
+-- Dumping data for table `penkum`
 --
 
 INSERT INTO `penkum` (`ID`, `Sasaran`, `Materi`, `JumlahPeserta`, `Waktu`, `Tempat`, `Media`, `MateriTidakLangsung`, `WaktuTidakLangsung`, `KetTidakLangsung`, `JenisPelaksanaan`, `Petugas`, `Ket`, `KerjaSamaInstansiLain`, `LinkGambar1`, `LinkGambar2`, `LinkGambar3`, `LinkGambar4`, `IDKelurahan`, `Lat`, `Lon`) VALUES
@@ -302,6 +303,25 @@ INSERT INTO `penkum` (`ID`, `Sasaran`, `Materi`, `JumlahPeserta`, `Waktu`, `Temp
 (17, 'Siswa-siswi SMAN 4 Palu', 'Tugas dan Fungsi Kejaksaan', 65, '2016-02-02', 'SMAN 4 Palu', NULL, NULL, NULL, NULL, 'langsung', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '-0.889487', '119.848244'),
 (18, 'Mahasiswa Akademi Kebidanan Kota Palu', 'Tugas dan Fungsi Kejaksaan', 65, '2016-10-05', 'Aula AKBID Kota Palu', NULL, NULL, NULL, NULL, NULL, 'E Yusak Tomasowa SH, Junaidy SH, M. Fikri SH', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (23, 'SMPN 4 Palu', 'Cyberbullying, Bahaya Narkoba', 800, '2017-05-15', 'SMPN 4 Palu', NULL, NULL, NULL, NULL, 'langsung', 'Efrivel SH', '', 'Dinas Pendidikan Kota Palu', 'img/uploads/12654460_1110280852350116_5063313027794735547_n.jpg', '', '', '', NULL, '-0.893456', '119.873918');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`) VALUES
+(1, 'ucup', 'topeko');
 
 --
 -- Indexes for dumped tables
@@ -361,6 +381,12 @@ ALTER TABLE `penkum`
   ADD KEY `fk_penkum_1_idx` (`IDKelurahan`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -369,52 +395,66 @@ ALTER TABLE `penkum`
 --
 ALTER TABLE `kecamatan`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT for table `kegiatanluhkum`
 --
 ALTER TABLE `kegiatanluhkum`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
 --
 -- AUTO_INCREMENT for table `kelurahan`
 --
 ALTER TABLE `kelurahan`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+
 --
 -- AUTO_INCREMENT for table `korupsi`
 --
 ALTER TABLE `korupsi`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `luhkum`
 --
 ALTER TABLE `luhkum`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `narkoba`
 --
 ALTER TABLE `narkoba`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `penkum`
 --
 ALTER TABLE `penkum`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `kegiatanluhkum`
+-- Constraints for table `kegiatanluhkum`
 --
 ALTER TABLE `kegiatanluhkum`
   ADD CONSTRAINT `fk_kegiatanpenluh_1` FOREIGN KEY (`IDKelurahan`) REFERENCES `kelurahan` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_kegiatanpenluh_2` FOREIGN KEY (`IDLuhkum`) REFERENCES `luhkum` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `kelurahan`
+-- Constraints for table `kelurahan`
 --
 ALTER TABLE `kelurahan`
   ADD CONSTRAINT `fk_kelurahan_1` FOREIGN KEY (`IDKecamatan`) REFERENCES `kecamatan` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

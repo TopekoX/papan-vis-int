@@ -42,16 +42,16 @@
     <title>Login</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../datavisual/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../visual/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="../datavisual/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="../visual/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../datavisual/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../visual/dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../datavisual/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../visual/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -96,16 +96,16 @@
     </div>
 
     <!-- jQuery -->
-    <script src="../datavisual/vendor/jquery/jquery.min.js"></script>
+    <script src="../visual/vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../datavisual/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../visual/vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="../datavisual/vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="../visual/vendor/metisMenu/metisMenu.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="../datavisual/dist/js/sb-admin-2.js"></script>
+    <script src="../visual/dist/js/sb-admin-2.js"></script>
 
 </body>
 

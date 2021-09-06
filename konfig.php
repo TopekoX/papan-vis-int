@@ -7,9 +7,9 @@
 
 // Database Konfigurasi
 $host = "localhost";
-$user = "ucup";
-$pass = "topeko";
-$db = "visual";
+$user = "root";
+$pass = "";
+$db = "bdi";
 
 $con = mysqli_connect($host, $user, $pass, $db) or die(mysqli_error($con));
 

@@ -1,4 +1,5 @@
 <?php 
+error_reporting(0); // non aktifkan pesan error
 include 'konfig.php'; 
 include 'session.php';
 ?>
